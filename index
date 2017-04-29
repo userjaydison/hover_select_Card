@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+body{background-color:#eee;color:rgb(230, 230, 230);min-height:100%;height:auto!important;height:100%;list-style-type: none;background-color: rgb(24, 24, 24);}
+*{list-style-type: none; }
+.case{width:1100px; height: 400px;margin:100px auto;}
+.case .title-list{ margin: 0; padding: 0; }
+.case .title-list li{ width: 220px; height: 400px;line-height: 10px; text-align: center; float: left;background-color: rgb(85, 85, 85);}
+.case .title-list li h1 {margin: 0; padding-top: 60px;}
+.case .title-list li p {margin: 0; line-height: 40px;}
+.case .title-list li .topBox {width: 220px; height: 130px;text-align: center; background-color: rgb(45, 45, 45);}
+.case .title-list li .bottomBox {width: 220px; height: 270px; }
+.case .title-list li.on{ color: rgb(15, 165, 235); font-weight: bold;}
+.case .title-list li.on h1 {color: rgb(230, 230, 230);}
+.case .title-list li.on .topBox.on {height: 140px;margin-top: -10px;background-color: rgb(15, 165, 235);}
+.case .title-list li.on .bottomBox {height: 280px; background-color: rgb(230, 230, 230);}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="case">
+        <ul class="title-list">
+            <li class="on">
+                <div class="topBox on"> 
+                    <h1>刘亦菲</h1></div>
+                <div class="bottomBox">
+                    <p style="padding-top: 30px;">Μουσαι</p>
+                    <p>1987/8/25</p>
+                    <p>北京电影学院2002级</p>
+                    <p>170cm</p>
+                    <p>《神雕侠侣》</p>
+                </div>
+            </li>
+            <li>
+                <div class="topBox">
+                    <h1>张含韵</h1></div>
+                <div class="bottomBox">
+                    <p style="padding-top: 30px;">Μουσαι</p>
+                    <p>1989/4/9</p>
+                    <p>中央戏剧学院</p>
+                    <p>162cm</p>
+                    <p>《酸酸甜甜就是我》</p>
+                </div>
+            </li>
+            <li>
+                <div class="topBox">
+                    <h1>金沙</h1></div>
+                <div class="bottomBox">
+                    <p style="padding-top: 30px;">Μουσαι</p>
+                    <p>1983/3/14</p>
+                    <p>东亚商学院</p>
+                    <p>166cm</p>
+                    <p>《神话》</p>
+                </div>
+            </li>
+            <li>
+                <div class="topBox">
+                    <h1>朴敏英</h1></div>
+                <div class="bottomBox">
+                    <p style="padding-top: 30px;">Μουσαι</p>
+                    <p>1986/3/4</p>
+                    <p>东国大学戏剧电影学系</p>
+                    <p>164cm</p>
+                    <p>《city hunter》</p>
+                </div>
+            </li>
+            <li>
+                <div class="topBox">
+                    <h1>林秀晶</h1></div>
+                <div class="bottomBox">
+                    <p style="padding-top: 30px;">Μουσαι</p>
+                    <p>1979/7/11</p>
+                    <p>明德女子高等学校</p>
+                    <p>165cm</p>
+                    <p>《对不起，我爱你》</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        // 使用 $(this)获取到当前操作的DOM元素，在使用find()遍历方法查找当前元素下的子元素改变样式，使用siblings()遍历当前元素的同胞元素移除样式
+        $('.title-list li').mouseover(function() {
+            $(this).addClass('on').siblings().removeClass('on');
+            $(this).find('.topBox').addClass('on').siblings().removeClass('on');
+            $(this).css("background-color","rgb(230, 230, 230)").siblings().css("background-color","rgb(85, 85, 85)");
+        });
+    });
+    </script>
+</body>
+
+</html>
